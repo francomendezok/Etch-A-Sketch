@@ -1,9 +1,19 @@
+h1 {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
 .container {
     display: flex;
     flex-wrap: wrap;
     flex-shrink: 1;
-    width: 256px;
-    height: 256px;
+    width: 400px;
+    height: 400px;
     margin: auto;
     border: 5px solid black;
     padding: 0;
@@ -17,5 +27,9 @@
     margin: 0;
     background-color: white ;
     border: 2px solid grey;
+  }
+
+  .alert {
+    display: none;
   }
   
