@@ -10,17 +10,18 @@
 <body>
     <div class="header">
         <h1>Etch-A-Sketch</h1>
-        <label>Size:<input id="submit" type="text"><button id="send">Send</button>
-            <p class="alert" >Size Less than 64</p>
+        <p id="rangeValue">32 x 32</p>
+        <input id="sizeSlider" type="range" value="32" min="1" max="64">
     </div>
     <div class="hover-container">
         <button class = "select-hover color">Color</button>
         <button class = "select-hover black">Black</button>
         <button class = "select-hover gray-scale">Gray Scale</button>
         <button class = "select-hover rainbow">Rainbow</button>
-        <button class = "select-hover erase">Erase</button>
+        <button class = "select-hover erase">Clear</button>
     </div>
     <div class="container">
     </div>
+    
 </body>
 </html>
