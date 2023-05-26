@@ -9,26 +9,22 @@ const black = document.querySelector(".black");
 const greyScale = document.querySelector(".grey-scale");
 const rainbow = document.querySelector(".rainbow");
 const erase = document.querySelector(".erase");
+const hovers = document.querySelectorAll(".select-hover")
 
-  
-
-button.addEventListener("click",getValue);
 
 function getValue() {
   var value = document.getElementById("submit").value;
-  
-  
+   
   if (value > 64) {
-    alert.style.display = "block";
+    alert.style.display = "inline";
+    alert.style.margin = "10px";
+    alert.style.padding = "0px"
   }
   if (value < 64) {
     alert.style.display = "none";
     printDiv(value);
-  }
-
+  }  
 }
-
-
 
 function printDiv (size) {
     container.textContent = ''; // Clear the container, remove the old divs
@@ -37,11 +33,13 @@ function printDiv (size) {
       container.style.display = 'grid';
       container.style.gridTemplateColumns = `repeat(${size}, 1fr)`; // 5 columnas de ancho flexible
       container.style.gridTemplateRows = `repeat(${size}, 1fr)`; // 5 filas de alto flexible
+      div.classList.add("box");
       container.appendChild(div);
-
+      
     }
   }
-
+  button.addEventListener("click",getValue);
+  
   window.addEventListener("keypress", function(event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
@@ -52,15 +50,30 @@ function printDiv (size) {
     }
   });
 
-  black.addEventListener("click",blackHover)
+  // Get Class Name //
 
-
-  function blackHover () {
-    div.addEventListener("mousenter", function (){
-      div.style.backgroundColor = "black";
-    })
-  }
   
-  //FIX div is not defined, maybe do it inside a function //
-  // Use switch case to read the value of the button and chamge the color//
+  hovers.forEach(option => option.addEventListener("click", function getClassName () {
+    //get class name// 
+    const className = option.classList[1];
+    console.log(className);
+}))
+
+    //with the class name, apply the hover effect//
+
+    const divs = document.querySelectorAll(".box");
+    divs.forEach(div => {
+      div.addEventListener("click", function () {
+        div.style.backgroundColor = "black";
+      });
+  });
+  
+
+
+
+
+
+  
+
+  // Use a bar to select the size (4x4, 16x16, etc)
 
