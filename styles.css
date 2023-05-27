@@ -39,9 +39,14 @@ h1 {
     border: 1px solid grey;
   }
 
-  .alert {
-    display: none;
-  }
+ #colorPicker {
+  z-index: -1;
+  position: relative;
+  left: 800px;
+  top: 20px;
+  width: 10px;
+  height: 0px;
+}
 
   .hover-container {
     display: flex;
@@ -149,8 +154,8 @@ h1 {
 
 @media (max-width:600px) and (max-height:900px) {
   .container {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin-top: 250px;
   } 
 
@@ -173,5 +178,13 @@ h1 {
   .header {
     display: flex;
     flex-shrink: 0;
+  }
+  #colorPicker {
+    z-index: -1;
+    position: relative;
+    left: 50px;
+    top: 50px;
+    width: 10px;
+    height: 0px;
   }
 }
