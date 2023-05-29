@@ -103,9 +103,6 @@ function getRandomRGBColor() {
 
 
 
-
-
-
   // Default Size //
   printDivs(16);
 
